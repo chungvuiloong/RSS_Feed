@@ -20,5 +20,25 @@
     </div>
     <script src="https://static.sekandocdn.net/static/feednami/feednami-client-v1.1.js"></script>
     <script src="app.js"></script>
+    <script>
+        let url = 'https://www.lianatech.com/resources/blog.rss';
+        const textarea = document.querySelector('#feed-textarea > ul');
+        const date = new Date();
+        document.querySelector('#date').innerHTML = date.toDateString();
+
+          feednami.load(url)
+          .then(feed => {
+            textarea.value = ''
+            console.log(feed);
+            for(let entry of feed.entries){
+                //create a list element
+                let li = document.createElement('li');
+                //add HTML content to list items
+                li.innerHTML = `<h4><a href="${entry.link}">${entry.title}</a></h4>`;
+                //append HTML content to list 
+                textarea.appendChild(li);
+            }
+          });
+    </script>
 </body>
 </html>
