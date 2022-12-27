@@ -1,5 +1,6 @@
 # RSS_Feed
 - Practice project using Feednami to map out data from RSS feed.
+- **Github link** - https://github.com/jirimicvl/RSS_Feed
 - **Project deployed** via <a href="https://rss-feed-navy.vercel.app">vercel</a> - https://rss-feed-navy.vercel.app
 
 ###### **Tools & Technologies**
